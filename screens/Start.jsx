@@ -20,7 +20,7 @@ const Start = () => {
                 keyboardType="number-pad"
                 />
         </View>
-        <TouchableOpacity  onPress={() => navigation.navigate('Verification')} style={styles.button}>
+        <TouchableOpacity  onPress={() => navigation.navigate('Verification',{verificationCode: verificationCode})} style={styles.button}>
          <Text style={styles.buttonText}>GENERATE VERIFICATION</Text>
        </TouchableOpacity>
        <TouchableOpacity  onPress={() => navigation.navigate('Settings')} style={styles.button}>

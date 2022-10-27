@@ -154,7 +154,6 @@ const styles = StyleSheet.create({
       flexDirection: 'row',
       borderColor: '#c1c1c1',
       borderWidth: 1,
-      paddingLeft: 15,
       alignItems: 'center',
       marginBottom: 5,
       borderRadius: 15,
@@ -175,7 +174,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius:15,
-    marginBottom: 10,
+    marginTop: 20,
   
   },
   buttonText:{
