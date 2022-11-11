@@ -3,7 +3,7 @@ import { StyleSheet, Text,Image,TextInput, SafeAreaView,View,TouchableOpacity, K
 import { cores } from '../cores';
 import { useNavigation } from '@react-navigation/native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-
+import avatar from '../assets/default_avatar.jpg';
 
 const Verification = ({route}) => {
   const [title,setTitle] = useState('');
@@ -38,7 +38,7 @@ const Verification = ({route}) => {
     <View style={styles.container}>
         <View style={styles.userContainer}>
             <Text style={styles.title}>{title}</Text>
-            <Image source={{ uri: keyholderAvatar }} style={{ width: 150, height: 150,borderRadius:75,margin:5 }} />
+            <Image source={keyholderAvatar ? { uri: keyholderAvatar }: avatar} style={{ width: 150, height: 150,borderRadius:75,margin:5 }} />
             <Text style={styles.keyholderName}>{keyholderName}</Text>
         </View>
         <View style={styles.codeArea}>
@@ -46,7 +46,7 @@ const Verification = ({route}) => {
           <Text style={styles.code}>{verificationCode}</Text>
         </View>
         <View style={styles.userContainer}>
-            <Image source={{ uri: wearerAvatar }} style={{ width: 100, height: 100,borderRadius:50,margin:5 }} />
+            <Image source={wearerAvatar ? { uri: wearerAvatar }: avatar} style={{ width: 100, height: 100,borderRadius:50,margin:5 }} />
             <Text style={styles.wearerName}>{wearerName}</Text>
         </View>
    </View>
@@ -92,8 +92,9 @@ const styles = StyleSheet.create({
     },
     code:{
       fontWeight: 'bold',
-      fontSize:36,
+      fontSize:40,
       color: cores.branco,
+      letterSpacing: 4,
     },
     wearerName:{
       fontSize:18,

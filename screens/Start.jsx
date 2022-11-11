@@ -14,7 +14,7 @@ const Start = () => {
         <Image source={logo} style={styles.logo}/>
         <View style={styles.inputArea}>
             <TextInput style={styles.input}
-                placeholder="Enter verification code"
+                placeholder="Enter verification codee"
                 value={verificationCode}
                 onChangeText={t=>setVerificationCode(t)}
                 keyboardType="number-pad"
